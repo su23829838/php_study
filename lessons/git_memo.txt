@@ -13,3 +13,4 @@ ssh キーを登録した後の疎通確認
 　git -T git@github.com
 
 git -u オプションは upstream で次から git push だけでよくなる
+main 以外のブランチはその限りでない
