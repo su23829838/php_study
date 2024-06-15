@@ -1,2 +1,13 @@
 --- 誤って削除したりしたファイルをすべて元に戻したいとき
 git restore .
+
+git 設定確認
+git config --list
+
+git はssh 通信するので
+c\user\name 
+配下に .ssh キーを作成したうえで git に登録する
+　ssh-keygen -t ed25519 -C　"mailaddress"
+
+ssh キーを登録した後の疎通確認
+　git -T git@github.com
