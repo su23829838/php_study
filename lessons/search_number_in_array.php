@@ -38,3 +38,16 @@
      
     echo $ans;
 ?>
+// count unique element 
+<?php
+    // 自分の得意な言語で
+    // Let's チャレンジ！！
+    $input_line = explode(" ",fgets(STDIN));
+   $array = [] ;
+   for($i = 0 ; $i < intval($input_line[0]); $i++){
+       $array[] = intval(fgets(STDIN));
+   }
+    
+    $unique_array = array_unique($array);
+    echo count($unique_array);
+?>
