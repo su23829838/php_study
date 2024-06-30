@@ -86,7 +86,7 @@
       if($key == intval($target[0])){
         
         $replacement = ".";
-        if(substr($value, intval($target[1]), 1)){
+        if(substr($value, intval($target[1]), 1) ==$replacement){
           $replacement = "#";
         }
         
