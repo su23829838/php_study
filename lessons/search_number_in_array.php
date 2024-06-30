@@ -51,3 +51,21 @@
     $unique_array = array_unique($array);
     echo count($unique_array);
 ?>
+
+
+//----- add value in thirough the foreach
+<?php
+    // 自分の得意な言語で
+    // Let's チャレンジ！！
+    $input_line = explode(" ",fgets(STDIN));
+    
+    $array=[];
+    for($i=0; $i < intval($input_line[0]); $i++){
+       $array[] = intval(fgets(STDIN));
+    }
+
+    foreach($array as $item){
+       // echo $item;
+        echo $item + intval($input_line[1])."\n";
+    }
+?>
