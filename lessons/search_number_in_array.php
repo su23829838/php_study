@@ -69,3 +69,32 @@
         echo $item + intval($input_line[1])."\n";
     }
 ?>
+// ------------------- map replace
+<?php
+    // 自分の得意な言語で
+    // Let's チャレンジ！！
+    $line = explode(" ",fgets(STDIN));
+    $array = [];
+    for($i= 0 ; $i < intval($line[0]); $i++){
+        $array[] = fgets(STDIN);
+    }
+    
+    $target = explode(" ",fgets(STDIN)); 
+   
+    foreach($array as $key => $value){
+   
+      if($key == intval($target[0])){
+        
+        $replacement = ".";
+        if(substr($value, intval($target[1]), 1)){
+          $replacement = "#";
+        }
+        
+        echo substr_replace($value, $replacement, intval($target[1]), 1);
+      } else{
+          echo $value;
+      }
+        echo "\n";
+    } 
+
+?>
