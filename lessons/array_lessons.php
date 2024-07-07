@@ -26,27 +26,26 @@
 // 5
 // 3 5
     $count = fgets(STDIN);
-    
-    $array = array("start");
-    
+
     for($i = 0;$i < $count; $i++){
         $array[] = trim(fgets(STDIN));
     }
     
-    $target = explode(" ",fgets(STDIN));
+   // print_r($array);
     
-    $target_1= $target[0]; 
-    $target_2= $target[1]; 
+    $target = explode(" ",fgets(STDIN));
+    //print_r($target);
+    
+    $target_1= intval($target[0])-1; 
+    $target_2= intval($target[1])-1; 
     
     $temp = $array[$target_1];
-    $array[$target_2] =  $array[$target_1];
-    $array[$target_1] = $temp;
+    $array[$target_1] =  $array[$target_2];
+    $array[$target_2] = $temp;
     
     foreach($array as $key => $value){
-       
-        if($key > 1){
             echo $value ."\n";
-        }
     }
     
 ?>
+
