@@ -14,3 +14,39 @@
                  print($item)."\n";
     }
 ?>
+
+
+//swap array
+<?php
+// 5
+// 1
+// 2
+// 3
+// 4
+// 5
+// 3 5
+    $count = fgets(STDIN);
+    
+    $array = array("start");
+    
+    for($i = 0;$i < $count; $i++){
+        $array[] = trim(fgets(STDIN));
+    }
+    
+    $target = explode(" ",fgets(STDIN));
+    
+    $target_1= $target[0]; 
+    $target_2= $target[1]; 
+    
+    $temp = $array[$target_1];
+    $array[$target_2] =  $array[$target_1];
+    $array[$target_1] = $temp;
+    
+    foreach($array as $key => $value){
+       
+        if($key > 1){
+            echo $value ."\n";
+        }
+    }
+    
+?>
