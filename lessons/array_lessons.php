@@ -49,3 +49,24 @@
     
 ?>
 
+//array push
+<?php
+    // 自分の得意な言語で
+    // Let's チャレンジ！！
+    $count = fgets(STDIN);
+    $array = [];
+    for($i = 0; $i < $count; $i++)
+    {
+        $array[] = fgets(STDIN);
+    }
+    
+    //1
+    //1
+    //2
+   array_push($array, intval(fgets(STDIN)));
+    
+    foreach($array as $item){
+        echo $item;
+    }
+    
+?>
