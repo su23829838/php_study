@@ -34,3 +34,23 @@
    }
 
 ?>
+
+//splice array element
+<?php
+    // 自分の得意な言語で
+    // Let's チャレンジ！！
+    $input_line = fgets(STDIN);
+    $array = [];
+    for($i = 0;$i < $input_line ; $i++){
+     $array[] = intval(fgets(STDIN));    
+    }
+    
+    $t1 = intval(fgets(STDIN)) ;
+    
+    array_splice($array , $t1-1, 1);
+    
+    foreach($array as $item){
+        echo $item . "\n";
+    }
+    
+?>
