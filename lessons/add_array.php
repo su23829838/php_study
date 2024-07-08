@@ -86,3 +86,28 @@ for ($i = 1; $i < $count; $i++) {
     }
 }
 ?>
+
+//配列の要素数の確認
+<?php
+    // 自分の得意な言語で
+    // Let's チャレンジ！！
+    $input_line = explode(" ",fgets(STDIN));
+    
+    $array =[];
+    
+    $count = intval($input_line[1]);
+    $loop_normal = intval($input_line[0]);
+    
+    for($i =0; $i < $count; $i++){
+        
+        if($loop_normal > $i){
+            $array[] = trim(fgets(STDIN)); 
+        }else{
+            $array[]= 0;
+        }
+    }
+    
+    foreach($array as $item){
+        echo $item . "\n";
+    }
+?>
