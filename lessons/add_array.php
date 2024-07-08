@@ -68,5 +68,21 @@
           }
         }
     }
-   
+?>
+
+// php 自分より低い要素に値をかけていく
+<?php
+// 入力を取得する
+$count = intval(fgets(STDIN));
+$array = [];
+for ($i = 0; $i < $count; $i++) {
+    $array[] = intval(fgets(STDIN));
+}
+
+// 計算と出力
+for ($i = 1; $i < $count; $i++) {
+    for ($j = 0; $j < $i; $j++) {
+        echo $array[$i] * $array[$j] . "\n";
+    }
+}
 ?>
