@@ -111,3 +111,23 @@ for ($i = 1; $i < $count; $i++) {
         echo $item . "\n";
     }
 ?>
+
+//array 重複排除
+<?php
+    // 自分の得意な言語で
+    // Let's チャレンジ！！
+    $count = intval(fgets(STDIN));
+    
+    $array =[];
+    
+    for($i =0; $i < $count; $i++){
+      $array[]= trim(fgets(STDIN));
+    }
+    
+    $result = array_unique($array);
+    
+    foreach($result as $item){
+        echo $item . "\n"; 
+    }
+
+?>
