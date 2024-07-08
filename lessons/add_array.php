@@ -131,3 +131,34 @@ for ($i = 1; $i < $count; $i++) {
     }
 
 ?>
+
+
+//傾斜配点 
+→　ここに空白や文字があったらphp　だと表示されてしまう。
+<?php
+
+    $count = intval(trim(fgets(STDIN)));
+    $gr = explode(" " , trim(fgets(STDIN)));
+    
+    $array =[];
+    for($i =0; $i < $count; $i++){
+      $array[]= explode(" " , trim(fgets(STDIN)));
+    }
+
+     $result = 0;
+     
+     foreach($array as $item){
+       $ar = array_map('intval', $item);
+       $re = 0; 
+        
+       for($i = 0; $i < 5; $i++){
+         $re +=  $ar[$i] * $gr[$i]; 
+       }
+       
+       if($result < $re){
+          $result = $re;
+       }
+     }
+    echo trim($result) ."\n";
+   // echo trim($result) ;
+?>
