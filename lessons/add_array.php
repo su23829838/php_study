@@ -162,3 +162,34 @@ for ($i = 1; $i < $count; $i++) {
     echo trim($result) ."\n";
    // echo trim($result) ;
 ?>
+
+
+//配列活用について
+<?php
+
+  //5 3974 0
+  //2049
+  //4690
+  //6867
+  //3414
+  //460
+  
+    $seed = explode(" " , trim(fgets(STDIN)));
+    
+    $count = intval($seed[0]);
+   
+    $array =[];
+    for($i =0; $i < $count; $i++){
+         $res =  intval(fgets(STDIN));
+         if($res > intval($seed[1]) ){
+            $array[] =  $res;
+         }
+    }
+    
+    $result = count($array);
+    $result = $result - intval($seed[2]) > 0 ?  $result - intval($seed[2]) : 0;
+    
+    echo $result;
+  
+?>
+
