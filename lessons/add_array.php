@@ -219,3 +219,34 @@ for ($i = 1; $i < $count; $i++) {
         echo $A[$i] . "\n";
     }
 ?>
+
+// find minimal diff
+<?php
+  $count = fgets(STDIN);
+ 
+  $array = []; 
+  for($i=0; $i < $count; $i++ ){
+   $array[] = intval(trim(fgets(STDIN)));
+  }
+  
+  $diff = 100000;
+  $ans = [];
+  
+  for($i = 0; $i < $count; $i++ ){
+    for($j = $i+1 ; $j < $count; $j++ ){
+        
+        $temp = abs($array[$i] - $array[$j]);
+        if($temp < $diff){
+            $diff = $temp ;
+            $ans = [$array[$i],$array[$j] ];
+        }
+        
+    }        
+  }
+
+   sort($ans);
+   foreach ($ans as $value) {
+       echo $value . "\n";
+   }
+
+?>
