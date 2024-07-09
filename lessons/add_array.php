@@ -193,3 +193,29 @@ for ($i = 1; $i < $count; $i++) {
   
 ?>
 
+ // queue ??
+<?php
+$N = intval(trim(fgets(STDIN)));
+$A = [];
+$front = 0;
+$back = 0;
+
+for ($i = 0; $i < $N; $i++) {
+    $input = trim(fgets(STDIN));
+    $parts = explode(" ", $input);
+
+    if ($parts[0] == "in") {
+        $n = intval($parts[1]);
+        $A[$back] = $n;
+        $back++;
+    } else {
+        if ($front != $back) {
+            $front++;
+        }
+    }
+}
+
+for ($i = $front; $i < $back; $i++) {
+    echo $A[$i] . "\n";
+}
+?>
